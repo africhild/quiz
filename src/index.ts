@@ -22,7 +22,7 @@ app.post("/question", validate, async (req: Request, res: Response) => {
     const result = await instance.Request(
       `Generate a random question in ${category} with Five options in a alphabetical list format and indicate the  correct answer`
     );
-    res.status(200).json({response: result});
+    res.status(200).json(result);
   } catch (error) {
     console.error(error); // Log the error to console (for your debugging)
     res.status(500).send(error.message); // Send the error message to the client

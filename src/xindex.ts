@@ -55,7 +55,7 @@ app.post("/questions", validate, async (req: Request, res: Response) => {
     );
     console.log(result);
 
-    res.status(200).json({response: result});
+    res.status(200).send(result);
   } catch (error) {
     console.error(error); // Log the error to console (for your debugging)
     res.status(500).send(error.message); // Send the error message to the client
